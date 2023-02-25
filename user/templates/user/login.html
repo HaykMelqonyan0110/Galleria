@@ -5,6 +5,14 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat+arm&display=swap" rel="stylesheet"/>
 </head>
 <body>
+<form method="POST">
+
+    {% csrf_token %}
+    {{ form }}
+
+    <button type="submit">Sign in</button>
+</form>
+
 <div class="v69_58">
     <div class="v69_59"></div>
     <div class="v69_60"></div>
