@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     # dev
     'homepage',
     'user',
+    'user_profile',
 
 ]
 
