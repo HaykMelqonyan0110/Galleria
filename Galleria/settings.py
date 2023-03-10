@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,8 +29,6 @@ INSTALLED_APPS = [
     'homepage',
     'user',
     'user_profile',
-    'all_items'
-
 ]
 
 MIDDLEWARE = [
@@ -107,7 +106,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'static'
+    BASE_DIR / 'homepage/static',
+    'user/static'
 ]
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -118,4 +118,5 @@ LOGIN_REDIRECT_URL = 'profile'
 
 LOGIN_URL = 'login'
 
-
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'

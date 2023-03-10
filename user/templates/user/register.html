@@ -5,62 +5,73 @@
         <link href="https://fonts.googleapis.com/css?family=Optima&display=swap" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css?family=Montserrat+arm&display=swap" rel="stylesheet"/>
         <link rel="stylesheet" href="{% static 'user/css/register.css' %}">
+        <link rel="stylesheet" href="/user/static/user/css/register.css">
         <title></title>
     </head>
 
     <body>
-        <form method="POST">
-            {% csrf_token %}
-            {{ form }}
-
-            <button type = "submit">Sign up</button>
-        </form>
-
 
             <div class="v69_334">
-                <span class="v69_362">Welcome!</span>
-                <button type="submit" class="v69_335">Sign In</button><button type="submit" class="v69_336">Sign Up</button>
+                    <div>
+                        <form method="POST" action="">
 
-                <span class="v69_340">Name</span>
-                    <div class="v69_359">
-                        <input class="enter_name" type="text" placeholder="Please enter your first and last name"/>
+                            {% csrf_token %}
+                            <span class="v69_362">Welcome!</span>
+                            <button type="submit" class="v69_335">Sign In</button><button type="submit" class="v69_336">Sign Up</button>
+
+                            <span class="v69_340">Username</span>
+                                <div class="v69_359">
+                                    {{ form.username }}
+                                </div>
+
+                            <span class="v69_339">Email address</span>
+                                <div class="v69_360">
+                                    {{ form.email }}
+                                </div>
+
+                            <span class="v69_341">Enter Password...</span>
+                                <div class="v69_361">
+                                    {{ form.password1 }}
+                                </div>
+
+                            <span class="password_title">Re-enter Password...</span>
+                                <div class="password_container">
+                                    {{ form.password2 }}
+                                </div>
+
+                            <button type="submit" class="v69_343">Register</button>
+                        </form>
+                    </div>
+                    <span class="v69_342">OR</span>
+
+                    <div class="v69_345">
+                        <div class="v69_346"></div>
+                        <a href="" >Continue with Google</a>
                     </div>
 
-                <span class="v69_339">Email address</span>
-                    <div class="v69_360">
-                        <input class="enter_name" type="email" placeholder="Please enter your email"/>
+                    <div class="v69_352">
+                        <div class="v69_353"></div>
+                        <a href="" >Continue with Apple</a>
                     </div>
 
-                <span class="v69_341">Password</span>
-                    <div class="v69_361">
-                        <input class="enter_name" type="password" placeholder="Please enter your password"/>
+                    <div class="v69_355">
+                        <div class="v69_356">
+                            <div class="v69_357"></div>
+                        </div>
+                        <a href="">Continue with Facebook</a>
                     </div>
 
-                <button type="submit" class="v69_343">Register</button>
-
-            <span class="v69_342">OR</span>
-
-            <div class="v69_345">
-                <div class="v69_346"></div>
-                <a href="" >Continue with Google</a>
-            </div>
-
-            <div class="v69_352">
-                <div class="v69_353"></div>
-                <a href="" >Continue with Apple</a>
-            </div>
-
-            <div class="v69_355">
-                <div class="v69_356">
-                    <div class="v69_357"></div>
-                </div>
-                <a href="">Continue with Facebook</a>
-            </div>
-
-            <div class="v69_363"></div>
-
+                    <div class="v69_363"></div>
 
             </div>
-
+            {{ form.errors }}
     </body>
+
+<script>
+		var form_fields = document.getElementsByTagName('input')
+
+		for (var field in form_fields){
+			form_fields[field].className = "enter_name"
+		}
+	</script>
 </html> <br/><br/>

@@ -1,0 +1,99 @@
+{% extends 'homepage/base.html' %}
+
+{% block title %}
+<title>Account</title>
+{% endblock title %}
+
+{% block content %}
+            <div class="h1-in-form">ACCOUNT DETAILS</div>
+        <div id="options" style="margin-bottom: 30px;" class="form-wrap">
+
+            <div class="form-item1 clearfix">
+                <label>First name
+                    <br>
+                    <input type="text" name="firstname" value="" placeholder="Your first name">
+                </label>
+
+
+                <label>Last name
+                    <br>
+                    <input type="text" name="lastname" value="" placeholder="Your last name">
+                </label>
+
+            </div>
+
+            <br>
+
+            <div class="form-item2 clearfix">
+                <label><br>E-Mail address
+                    <br>
+                    <input type="text" name="email" value="" placeholder="Your E-Mail: ">
+                </label>
+
+            </div>
+
+            <div class="form-item3 clearfix">
+                <label>Phone number
+                    <br>
+                    <input type="text" name="land" value="" placeholder="Phone number">
+                </label>
+
+            </div>
+            <div class="form-item4 clearfix">
+                <label>Date of birthday
+                    <br>
+                    <input type="text" name="" value="" placeholder="dd">
+                    <input type="text" name="" value="" placeholder="mm">
+                    <input type="text" name="" value="" placeholder="yyyy">
+                </label>
+                <div class="cont-gend">
+                    <label class="container-gender">Male
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container-gender">Female
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="textarea-cont">
+                <div class="form-textarea">
+                    <label>Edit password:</label>
+                </div>
+            </div>
+            <div class="form-item5 clearfix">
+            <label>Old password
+                <br>
+                <input type="password" name="altpass" placeholder="Old password">
+            </label>
+
+            </div>
+            <div class="form-item6 clearfix">
+            <label>New password
+                <br>
+                <input type="password" name="password" placeholder="New password">
+            </label>
+
+            </div>
+            <div class="form-item7 clearfix">
+            <label>Confirm password
+                <br>
+                <input type="password" name="password" placeholder="Confirm password">
+            </label>
+            </div>
+
+            <div class="form-cont">
+                <div class="form-reset">
+                    <button name="reset" type="reset">Cancel</button>
+                </div>
+
+                <div class="form-submit">
+                    <button name="submit" type="submit">Save Changes</button>
+                </div>
+            </div>
+
+        </div>
+{% endblock content %}

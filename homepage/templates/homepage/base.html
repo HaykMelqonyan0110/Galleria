@@ -8,86 +8,145 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
         <link rel="stylesheet" href="{% static 'homepage/css/base.css' %}">
         <link rel="stylesheet" href="{% static 'homepage/css/home.css' %}">
+        <link rel="stylesheet" href="{% static 'user_profile/css/profile.css' %}">
+        <link rel="stylesheet" href="{% static 'user_profile/css/edit_account_details.css' %}">
+        <link rel="stylesheet" href="{% static 'user_profile/css/account_details.css' %}">
+
     </head>
     <body>
-        <div class="v5_10">
-            <header>
-
-                    <div class="v7_2"><a href="{% url 'home' %}" style="text-decoration: none; color: rgba(75, 75, 75, 1) " >Galleria</a></div>
-                    <span class="v7_41"><a href="" style="text-decoration: none; color: rgba(75, 75, 75, 1)">Women</a></span>
-                    <span class="v7_42"><a href="" style="text-decoration: none; color: rgba(75, 75, 75, 1)">Men</a></span>
-                    <span class="v7_43"><a href="" style="text-decoration: none; color: rgba(75, 75, 75, 1)">Kids</a></span>
-
-                <div class="v7_15">
-                    <div class="v7_16">
-                        <a href="" style="width: 31px; height: 30px">
-                            <i class="fa-regular fa-user"></i>
-                        </a>
+        <div class="container">
+            <header class="blog-header py-3">
+                <div class="row flex-nowrap justify-content-between align-items-center">
+                    <div class="col-4 pt-1">
+                        <a href="" class="text-muted">Women</a>
+                        <a href="" class="text-muted">Men</a>
+                        <a href="" class="text-muted">Kids</a>
                     </div>
-                </div>
-                <div class="v7_29">
-                    <div class="v7_30"></div>
-                </div>
-                <div class="v7_35">
-                    <div class="v7_36"></div>
+
+                    <div class="col-4 text-center">
+                        <a class="blog-header-logo" style="color: rgba(75, 75, 75, 1)" href="{% url 'home' %}">Galleria</a>
+                    </div>
+
+                    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+                        <li class="nav-item">
+                            {% if user.is_authenticated %}
+                                <a href="{% url 'profile' %}">
+                                    <img style="width: 34px; height: 33px" src="{% static 'homepage/icons/Sample_User_Icon.png' %}">
+                                </a>
+                            {% else %}
+                                <a href="{% url 'login' %}">
+                                    <img style="width: 34px; height: 33px" src="{% static 'homepage/icons/Sample_User_Icon.png' %}">
+                                </a>
+                            {% endif %}
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                                <img style="width: 34px; height: 33px" src="{% static 'homepage/icons/heart-icon.png' %}">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                                <img style="width: 34px; height: 33px" src="{% static 'homepage/icons/image.png' %}">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </header>
-            <aside>
-                <div class="v26_333"></div>
-                <span class="v26_334">FOLLOW US</span>
-                <div class="v26_336"></div>
-                <div class="v26_339">
-                    <div class="v26_340"></div>
-                </div>
-                <div class="v26_349">
-                    <div class="v26_350"></div>
-                </div>
-                <div class="v26_361">
-                    <div class="v26_351"></div>
-                    <div class="v26_352"></div>
-                </div>
-                <div class="v26_371">
-                    <div class="v26_372"></div>
-                </div>
-                <span class="v26_373">CUSTOMER SUPPORT</span>
-                <span class="v26_376">ABOUT GALLERIA</span>
-                <span class="v26_375">
-                        Contact us <br>
-                        Orders & delivery <br>
-                        Payment & pricing <br>
-                        Cryptocurrency payments <br>
-                        Returns & refunds <br>
-                        FAQs <br>
-                        Terms and conditions <br>
-                        Privacy police <br>
-                        Accessibility <br>
-                </span>
-                <span class="v26_377">
-                    About us <br>
-                    Investors <br>
-                    boutique partners <br>
-                    Careers <br>
-                    Sitemap <br>
-                    Customer promise <br>
-                    GALLERIA app <br>
-                </span>
-                        <span class="v7_48"><a href="" style="text-decoration: none; color: rgba(75, 75, 75, 1) " >Clothing</a></span>
-                        <span class="v7_49"><a href="" style="text-decoration: none; color: rgba(75, 75, 75, 1)">Shoes</a></span>
-                        <span class="v7_50"><a href="" style="text-decoration: none; color: rgba(75, 75, 75, 1)">Bags</a></span>
-                        <span class="v7_51"><a href="" style="text-decoration: none; color: rgba(75, 75, 75, 1)">Accessories</a></span>
 
+            <div class="nav-scroller py-1 mb-2">
+                <nav class="nav d-flex">
+                    <a href="#" class="p-2 text-muted">Clothing</a>
+                    <a href="#" class="p-2 text-muted">Shoes</a>
+                    <a href="#" class="p-2 text-muted">Bags</a>
+                    <a href="#" class="p-2 text-muted">Accessories</a>
 
-                <div class="search_box">
-                    <input class="search_txt" type="text" name="" placeholder="Search">
-                    <a class="search_btn" href="#"></a>
-                    <div class="v7_47"></div>
-                </div>
-            </aside>
+                        <form class="form-inline">
+                            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn" type="submit">
+                                <img class="btn2" src="{% static 'homepage/icons/search-icon-png-21.png' %}">
+                            </button>
+                        </form>
+                </nav>
+
+            </div>
+
             <main>
                 {% block content %}
 
                 {% endblock %}
             </main>
+
+            <footer class="blog-footer">
+
+                <div class="row">
+
+                    <div class="col-6 col-md">
+                        <h3>CUSTOMER SUPPORT</h3>
+                        <ul class="list-unstyled text-small">
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Contact us</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Orders & delivery</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Payment & pricing</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Cryptocurrency payments</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Returns & refunds</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">FAQs</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Terms and conditions</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Privacy police</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Accessibility</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md">
+                        <h3>ABOUT GALLERIA</h3>
+                        <ul class="list-unstyled text-small">
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">About us</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Investors</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Boutique partners</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Careers</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Sitemap</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Customer promise</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">GALLERIA app</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md">
+                        <h3>FOLLOW US</h3>
+
+                        <ul class="footer-container">
+                            <li class="footer-item">
+                                <a href="#">
+                                    <img style="width: 34px; height: 33px" src="{% static 'homepage/icons/instagram-logo.png' %}">
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#">
+                                    <img style="width: 34px; height: 33px" src="{% static 'homepage/icons/facebook-logo.png' %}">
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#">
+                                    <img style="width: 34px; height: 33px" src="{% static 'homepage/icons/youtube-logo.png' %}">
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#">
+                                    <img style="width: 34px; height: 33px" src="{% static 'homepage/icons/snapchat-logo.png' %}">
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#">
+                                    <img style="width: 34px; height: 33px" src="{% static 'homepage/icons/twitter-logo.png' %}">
+                                </a>
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+
+                </div>
+
+            </footer>
+
         </div>
     </body>
 </html>
