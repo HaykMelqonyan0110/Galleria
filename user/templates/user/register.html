@@ -10,7 +10,12 @@
     </head>
 
     <body>
+        <form method="POST">
+            {% csrf_token %}
+                {{ form }}
+                <button type="submit">Register</button>
 
+        </form>
             <div class="v69_334">
                     <div>
                         <form method="POST" action="">

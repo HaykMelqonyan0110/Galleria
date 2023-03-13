@@ -7,7 +7,11 @@
 {% block content %}
             <div class="h1-in-form">ACCOUNT DETAILS</div>
         <div id="options" style="margin-bottom: 30px;" class="form-wrap">
-
+            <form method="POST">
+                {% csrf_token %}
+                    {{ form }}
+                    <button type="submit">Edit</button>
+            </form>
             <div class="form-item1 clearfix">
                 <label>First name
                     <br>

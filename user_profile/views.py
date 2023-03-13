@@ -2,7 +2,10 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from .forms import UpdateUserProfile, UpdateUserData
 from django.views.generic import CreateView
+from .models import Profile
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+
+profile_details = Profile.objects.all()
 
 
 @login_required
@@ -28,18 +31,14 @@ def profile(request):
 
 
 def account_details(request):
-    return render(request, "user_profile/account_details.html")
-
-
-def edit_account_details(request):
-    return render(request, "user_profile/edit_account_details.html")
+    return render(request, "user_profile/account_details.html", {'profile': profile_details})
 
 
 def returns(request):
     return render(request, "user_profile/returns.html")
 
 
-
-
-
-
+class ProfileDetails(CreateView):
+    model = Profile
+    template_name = 'user_profile/edit_account_details.html'
+    fields = ['first_name', 'last_name', 'gender']
