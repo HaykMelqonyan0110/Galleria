@@ -1,0 +1,29 @@
+{% extends 'homepage/base.html' %}
+
+{% block content %}
+    <h1 style="font-family: Montserrat arm serif; color: rgba(75, 75, 75, 1)">{{ subcategory }}</h1>
+    <hr>
+    <div class="row-content-category">
+        {% for item in items %}
+            <div class="col-md-4">
+                <div class="card-1 mb-4 box-shadow">
+                    <a style="text-decoration: none" href="{% url 'item_view' item.id %}">
+                        <img class="card-img-top" style="height: 400px; width: 100%; display: block;" src="{{ item.add_image.url }}">
+
+                        <div class="card-body-1">
+                            <span class="card-text-product mb-auto-2">{{ item.add_name }}</span><br>
+                            <span class="text-muted">{{ item.add_material }}</span><br><br>
+                            <div class="card-money">
+                                <span class="card-text-money">{{ item.add_price }}</span>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+            </div>
+        {% empty %}
+            <li>No products found</li>
+        {% endfor %}
+    </div>
+
+{% endblock %}

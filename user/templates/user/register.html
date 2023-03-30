@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Optima&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat+arm&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="{% static 'user/css/register.css' %}">
+        <title></title>
+    </head>
+
+    <body>
+
+            <div class="v69_334">
+                    <div>
+                        <form method="POST" action="">
+
+                            {% csrf_token %}
+                            <span class="v69_362">Welcome!</span>
+                            <a style="text-decoration: none; color: rgba(75, 75, 75, 1); font-size: 30px" href="{% url 'login' %}"><button type="submit" class="v69_335">Sign In</button></a><a style="text-decoration: none; color: rgba(75, 75, 75, 1); font-size: 30px" href="{% url 'register' %}"><button type="submit" class="v69_336">Sign Up</button></a>
+
+                            <span class="v69_340">Username</span>
+                                <div class="v69_359">
+                                    {{ form.username }}
+                                </div>
+
+                            <span class="v69_339">Email address</span>
+                                <div class="v69_360">
+                                    {{ form.email }}
+                                </div>
+
+                            <span class="v69_341">Enter Password...</span>
+                                <div class="v69_361">
+                                    {{ form.password1 }}
+                                </div>
+
+                            <span class="password_title">Re-enter Password...</span>
+                                <div class="password_container">
+                                    {{ form.password2 }}
+                                </div>
+
+                            <a style="text-decoration: none; color: #E3E0D9 " href="{% url 'profile' %}"><button type="submit" class="v69_343">Register</button></a>
+                        </form>
+                    </div>
+                    <span class="v69_342">OR</span>
+
+                    <div class="v69_345">
+                        <div class="v69_346"></div>
+                        <a href="" >Continue with Google</a>
+                    </div>
+
+                    <div class="v69_352">
+                        <div class="v69_353"></div>
+                        <a href="" >Continue with Apple</a>
+                    </div>
+
+                    <div class="v69_355">
+                        <div class="v69_356">
+                            <div class="v69_357"></div>
+                        </div>
+                        <a href="">Continue with Facebook</a>
+                    </div>
+
+                    <div class="v69_363"></div>
+
+            </div>
+            {{ form.errors }}
+    </body>
+
+<script>
+		var form_fields = document.getElementsByTagName('input')
+
+		for (var field in form_fields){
+			form_fields[field].className = "enter_name"
+		}
+	</script>
+</html> <br/><br/>

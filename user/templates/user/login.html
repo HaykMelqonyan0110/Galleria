@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Optima&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat+arm&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="{% static 'user/css/login.css' %}">
+        <link rel="stylesheet" href="/user/static/user/css/login.css">
+        <title></title>
+    </head>
+
+    <body>
+
+            <div class="v69_334">
+                <span class="v69_362">Welcome!</span>
+                <a style="text-decoration: none; color: rgba(75, 75, 75, 1); font-size: 30px" href="{% url 'login' %}"><button type="submit" class="v69_335">Sign In</button></a><a style="text-decoration: none; color: rgba(75, 75, 75, 1); font-size: 30px" href="{% url 'register' %}"><button type="submit" class="v69_336">Sign Up</button></a>
+
+                            <span class="v69_340">Username</span>
+
+                    <div>
+                        <form method="POST" action="">
+
+                            {% csrf_token %}
+
+                                <div class="v69_359">
+                                    <input type="text" name="username" placeholder="Username" class="enter_name">
+
+                                </div>
+
+
+                            <span class="v69_341">Enter Password...</span>
+                                <div class="v69_361">
+                                    <input type="password" name="password" placeholder="Enter your password" class="enter_name">
+
+
+                                </div>
+
+                            <button type="submit" class="v69_343">Sing in</button>
+
+                        </form>
+                    </div>
+{#                {% for message in messages %}#}
+{#                    <p id="messages">{{ message }}</p>#}
+{#                {% endfor %}#}
+                    <span class="v69_342">OR</span>
+
+                    <div class="v69_345">
+                        <div class="v69_346"></div>
+                        <a href="" >Continue with Google</a>
+                    </div>
+
+                    <div class="v69_352">
+                        <div class="v69_353"></div>
+                        <a href="" >Continue with Apple</a>
+                    </div>
+
+                    <div class="v69_355">
+                        <div class="v69_356">
+                            <div class="v69_357"></div>
+                        </div>
+                        <a href="">Continue with Facebook</a>
+                    </div>
+
+                    <div class="v69_363"></div>
+
+            </div>
+            {{ form.errors }}
+    </body>
+
+</html>

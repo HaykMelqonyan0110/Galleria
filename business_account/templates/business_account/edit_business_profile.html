@@ -1,0 +1,66 @@
+{% extends 'homepage/base.html' %}
+
+{% block title %}
+    <title>Business register</title>
+{% endblock title %}
+
+
+{% block content %}
+<h1 class="profile-title">EDITING BRAND DETAILS</h1>
+
+<div class="form-wrap">
+    <div class="bs-title">
+        Add business details
+    </div>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="bs-form">
+
+            <br>
+            <div class="bs-form-item clearfix">
+
+                <label>Company name</label>
+                <label>
+                    {{ d_form.company_name }}
+                </label>
+
+                <label>E-Mail address</label>
+                <label>
+                    {{ d_form.company_email }}
+                </label>
+
+                <label>Phone number</label>
+                <label>
+                    {{ d_form.company_phone }}
+                </label>
+                <label>
+                    {{ p_form }}
+                </label>
+            </div>
+        </div>
+
+        <div class="bs-form">
+            <div class="bs-card mb-4 box-shadow">
+                {% for i in image %}
+                    <img class="card-img-top" src="{{ i.company_image.url }}">
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="form-cont">
+            <div class="form-reset">
+                <a style="text-decoration: none" href="{% url 'business_account' %}"><button name="submit" type="button">Cancel</button></a>
+            </div>
+
+            <div class="form-submit">
+                <button name="submit" type="submit">Save changes</button>
+            </div>
+        </div>
+
+    </form>
+
+</div>
+
+
+{% endblock content %}

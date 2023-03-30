@@ -1,0 +1,34 @@
+{% extends 'homepage/base.html' %}
+<!DOCTYPE html>
+
+{% block title %}
+                Profile
+{% endblock title %}
+
+{% block content %}
+
+    <h1 class="profile-title">Welcome to your profile {{ user.username }}!</h1>
+    <div class="profile-box">
+        <a style="text-decoration: none" class="btn-profile btn-secondary" href="{% url 'account' %}" role="button">Account details</a>
+    </div>
+
+    {% if check %}
+        {% for i in check %}
+            {% if i.owner == user %}
+                <div class="profile-box">
+                    <a style="text-decoration: none" class="btn-profile btn-secondary" href="{% url 'business_account' %}" role="button">Switch to business account</a>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <div class="profile-box">
+            <a style="text-decoration: none" class="btn-profile btn-secondary" href="{% url 'register_bs_account' %}" role="button">Register for business account</a>
+        </div>
+    {% endif %}
+
+
+    <div class="profile-box">
+        <a style="text-decoration: none" class="btn-profile btn-secondary" href="{% url 'logout' %}" role="button">Log out</a>
+    </div>
+{% endblock content %}
+

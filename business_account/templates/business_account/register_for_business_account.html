@@ -1,0 +1,64 @@
+{% extends 'homepage/base.html' %}
+
+{% block title %}
+    Business register
+{% endblock title %}
+
+
+{% block content %}
+<h1 class="profile-title">REGISTER FOR BUSINESS ACCOUNT</h1>
+<form method = "POST">
+        {% csrf_token %}
+<div class="form-wrap">
+
+    <div class="bs-title">
+        Add business details
+    </div>
+
+
+
+    <div class="bs-title">
+        Add the logo of your brand
+    </div>
+
+        <div class="bs-form">
+
+            <br>
+            <div class="bs-form-item clearfix">
+
+                <label>Company name</label>
+                <label>
+                    {{ form.company_name }}
+                </label>
+
+                <label>E-Mail address</label>
+                <label>
+                    {{ form.company_email }}
+                </label>
+
+                <label>Phone number</label>
+                <label>
+                    {{ form.company_phone }}
+                </label>
+            </div>
+        </div>
+
+        <div class="bs-form">
+            <div class="bs-card mb-4 box-shadow">
+                {{ form.company_image }}
+            </div>
+        </div>
+
+        <div class="form-cont">
+            <div class="form-reset">
+                <button name="reset" type="reset">Cancel</button>
+            </div>
+
+            <div class="form-submit">
+                <button name="submit" type="submit">Create account</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+{% endblock content %}

@@ -1,0 +1,73 @@
+{% extends 'homepage/base.html' %}
+{% block content %}
+    <div class="h1-in-form">ACCOUNT DETAILS</div>
+    <div id="options" style="margin-bottom: 30px;" class="form-wrap">
+
+        <div class="form-item clearfix">
+            <label>
+                First name
+            </label>
+
+
+            <label>
+                {{ user.profile.first_name }}
+            </label>
+        </div>
+        <div class="form-item clearfix">
+            <label>
+                Last name
+            </label>
+
+
+            <label>
+                {{ user.profile.last_name }}
+            </label>
+        </div>
+        <div class="form-item clearfix">
+            <label>
+                Email address
+            </label>
+
+
+            <label>
+                {{ user.email }}
+            </label>
+        </div>
+        <div class="form-item clearfix">
+            <label>
+                Phone number
+            </label>
+
+
+            <label>
+                {{ user.profile.phone_number }}
+            </label>
+        </div>
+        <div class="form-item clearfix">
+            <label>
+                 Your address
+            </label>
+
+
+            <label>
+                {{ user.profile.address }}
+            </label>
+        </div>
+        <div class="form-item clearfix">
+            <label>
+                Gender
+            </label>
+
+
+            <label>
+                {{ user.profile.gender_fields }}
+            </label>
+        </div>
+
+    </div>
+    <div class="form-cont2">
+        <div class="form-submit2">
+            <button name="submit" type="submit"><a style="color: #E3E0D9; text-decoration: none" href="{% url 'account_edit' %}">Edit</a></button>
+        </div>
+    </div>
+{% endblock content %}

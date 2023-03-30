@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Your business account orders</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Item</th>
+            <th>Status</th>
+        </tr>
+        {% for i in orders %}
+            <tr>
+                <td>{{ i.buyer.profile.first_name }} {{ i.buyer.profile.last_name }}</td>
+                <td>{{ i.buyer.profile.phone_number }}</td>
+                <td>{{ i.buyer.profile.address }}</td>
+                <td>{{ i.buyer_item }}</td>
+                <td><a href = "{% url 'bs_account_order_delete' i.id %}">Done</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href = "{% url 'business_account' %}">Go back</a>
+
+</body>
+</html>

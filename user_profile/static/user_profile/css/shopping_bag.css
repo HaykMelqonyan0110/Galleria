@@ -1,0 +1,87 @@
+.content-bag {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding-inline-end: 200px;
+    padding-inline-start: 200px;
+}
+
+.card-bag {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.card-bag-body {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    min-width: 0;
+    margin: 15px;
+}
+
+.img-bag{
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgba(75, 75, 75, 1);
+    border-radius: 30px;
+}
+
+.img-bag h4 {
+    text-align: center;
+    margin-block: 130px;
+    color: #4b4b4b;
+}
+
+.card-about-bag {
+    width: 90%;
+    padding: 15px;
+    padding-left: 25px;
+}
+
+.money-bag {
+    margin-top: 40px;
+    position: relative;
+    font-family: Montserrat arm,serif;
+    font-size: 30px;
+    padding-left: 35px;
+    color: #4b4b4b;
+}
+
+.title-bag {
+    font-size: 36px;
+    font-family: Montserrat arm serif;
+    padding: 5px;
+    text-align: left;
+    margin: 20px;
+}
+
+.text-bag {
+    color: #6c757d!important;;
+    position: relative;
+    font-family: Montserrat arm,serif;
+    font-size: 20px;
+    padding: 0.5px;
+    margin: 0;
+    padding-left: 35px;
+}
+
+.btn-bag {
+    width: 3%;
+}
+
+.btn-bag button {
+    padding: 2px;
+    border-radius: 10px;
+    color: #E3E0D9;
+    background-color: rgba(75, 75, 75, 1);
+    text-align: center;
+    border: 1px solid rgba(75, 75, 75, 1);
+    width: 35px;
+    height: 35px;
+}
+

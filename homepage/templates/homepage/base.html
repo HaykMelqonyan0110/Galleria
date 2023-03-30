@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <link rel="stylesheet" href="{% static 'homepage/css/base.css' %}">
+        <link rel="stylesheet" href="{% static 'homepage/css/home.css' %}">
+        <link rel="stylesheet" href="{% static 'user_profile/css/profile.css' %}">
+        <link rel="stylesheet" href="{% static 'user_profile/css/edit_account_details.css' %}">
+        <link rel="stylesheet" href="{% static 'user_profile/css/account_details.css' %}">
+        <link rel="stylesheet" href="{% static 'user_profile/css/no_orders.css' %}">
+        <link rel="stylesheet" href="{% static 'business_account/css/register_for_business_account.css' %}">
+        <link rel="stylesheet" href="{% static 'business_account/css/business_profile_details.css' %}">
+        <link rel="stylesheet" href="{% static 'items/css/add_item.css' %}">
+        <link rel="stylesheet" href="{% static 'user_profile/css/shopping_bag.css' %}">
+        <link rel="stylesheet" href="{% static 'items/css/item_view.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <header class="blog-header py-3">
+                <div class="row flex-nowrap justify-content-between align-items-center">
+                    <div class="col-4 pt-1">
+                        <a href="{% url 'shop_women' %}" class="text-muted">Women</a>
+                        <a href="{% url 'shop_men' %}" class="text-muted">Men</a>
+                        <a href="{% url 'shop_kids' %}" class="text-muted">Kids</a>
+                    </div>
+
+                    <div class="col-4 text-center">
+                        <a class="blog-header-logo" style="color: rgba(75, 75, 75, 1); text-decoration: none" href="{% url 'home' %}">Galleria</a>
+                    </div>
+
+                    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+                        <li class="nav-item">
+                            {% if user.is_authenticated %}
+                                <a href="{% url 'profile' %}">
+                                    <img style="width: 34px; height: 33px" src="{% static 'homepage/icons/Sample_User_Icon.png' %}">
+                                </a>
+                            {% else %}
+                                <a href="{% url 'login' %}">
+                                    <img style="width: 34px; height: 33px" src="{% static 'homepage/icons/Sample_User_Icon.png' %}">
+                                </a>
+                            {% endif %}
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{% url 'shopping_bag' %}">
+                                <img style="width: 34px; height: 33px" src="{% static 'homepage/icons/image.png' %}">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+
+            <div class="nav-scroller py-1 mb-2">
+                <nav class="nav d-flex">
+                    <a href="{% url 'only_subcategory' 'clothing'%}" class="p-2 text-muted">Clothing</a>
+                    <a href="{% url 'only_subcategory' 'shoes'%}" class="p-2 text-muted">Shoes</a>
+                    <a href="{% url 'only_subcategory' 'bags'%}" class="p-2 text-muted">Bags</a>
+                    <a href="{% url 'only_subcategory' 'accessories'%}" class="p-2 text-muted">Accessories</a>
+
+                </nav>
+
+            </div>
+
+            <main>
+                {% block content %}
+
+                {% endblock %}
+            </main>
+
+            <footer class="blog-footer">
+
+                <div class="row">
+
+                    <div class="col-6 col-md">
+                        <h3>CUSTOMER SUPPORT</h3>
+                        <ul class="list-unstyled text-small">
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Contact us</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Orders & delivery</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Payment & pricing</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Cryptocurrency payments</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Returns & refunds</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">FAQs</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Terms and conditions</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Privacy police</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Accessibility</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md">
+                        <h3>ABOUT GALLERIA</h3>
+                        <ul class="list-unstyled text-small">
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">About us</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Investors</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Boutique partners</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Careers</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Sitemap</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">Customer promise</a></li>
+                            <li><a style="color: rgba(252, 245, 241, 1);" class="text-muted1" href="#">GALLERIA app</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md">
+                        <h3>FOLLOW US</h3>
+
+                        <ul class="footer-container">
+                            <li class="footer-item">
+                                <a href="#">
+                                    <img style="width: 34px; height: 33px" src="{% static 'homepage/icons/instagram-logo.png' %}">
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#">
+                                    <img style="width: 34px; height: 33px" src="{% static 'homepage/icons/facebook-logo.png' %}">
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#">
+                                    <img style="width: 34px; height: 33px" src="{% static 'homepage/icons/youtube-logo.png' %}">
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#">
+                                    <img style="width: 34px; height: 33px" src="{% static 'homepage/icons/snapchat-logo.png' %}">
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#">
+                                    <img style="width: 34px; height: 33px" src="{% static 'homepage/icons/twitter-logo.png' %}">
+                                </a>
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+
+                </div>
+
+            </footer>
+
+        </div>
+    </body>
+</html>

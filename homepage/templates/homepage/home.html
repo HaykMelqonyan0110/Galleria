@@ -1,0 +1,58 @@
+{% extends 'homepage/base.html' %}
+
+{% block title %}
+    Homepage
+{% endblock title%}
+
+
+{% block content %}
+    <body>
+
+            {% for compan in company %}
+
+                <div class="nav-scroller py-1 mb-2">
+                    <div class="nav d-flex">
+                        <h5 class="title-text">
+                            {{ compan.company_name }}
+                        </h5>
+                    </div>
+                <hr>
+
+                </div>
+
+            <div class="row-content-category">
+
+                {% for item in items.all|slice:":3"%}
+                    {% if compan.owner == item.owner %}
+                        <a style="text-decoration: none" href="{% url 'item_view' item.id %}">
+                            <div class="col-md-4">
+                                <div class="card-1 mb-4 box-shadow">
+                                    <img class="card-img-top" style="height: 400px; width: 100%; display: block;" src="{{ item.add_image.url }}">
+
+                                    <div class="card-body-1">
+                                        <span class="card-text-product mb-auto-2">{{ item.add_name }}</span><br>
+                                        <span class="text-muted">{{ item.add_material }}</span><br><br>
+                                        <div class="card-money">
+                                            <span class="card-text-money">{{ item.add_price }}</span>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    {% endif %}
+                {% empty %}
+                    <li>No products found</li>
+                {% endfor %}
+
+                </div>
+                <br>
+                <hr>
+            {% endfor %}
+
+
+
+    </body>
+{% endblock content%}

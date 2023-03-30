@@ -1,0 +1,24 @@
+{% extends 'homepage/base.html' %}
+{% block title %}
+                Profile
+{% endblock title %}
+
+{% block content %}
+
+    <h1 class="profile-title">Welcome to your business account {% for n in name %}{{ n.company_name }}{% endfor %}!</h1>
+
+    <div class="profile-box">
+        <a style="text-decoration: none" class="btn-profile btn-secondary" href="{% url 'edit_bs_account' %}" role="button">Edit your business account details</a>
+    </div>
+    <div class="profile-box">
+        <a style="text-decoration: none" class="btn-profile btn-secondary" href="{% url 'bs_account_details' %}" role="button">Your business details</a>
+    </div>
+    <div class="profile-box">
+        <a style="text-decoration: none" class="btn-profile btn-secondary" href="{% url 'profile' %}" role="button">Switch to personal account</a>
+    </div>
+    <div class="profile-box">
+        <a style="text-decoration: none" class="btn-profile btn-secondary" href="{% url 'logout' %}" role="button">Log out</a>
+    </div>
+
+{% endblock content %}
+

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Owner's Item</h1>
+
+    {{ item.add_name }}
+    {{ item.add_description }}
+    {{ item.add_main_category }}
+    {{ item.add_subcategory }}
+    {{ item.add_price }}
+    {{ item.add_material }}
+    {{ item.add_clothing_size }}
+    {{ item.add_shoes_size }}
+    {{ item.add_color }}
+    {% if item.add_image %}
+        <img src="{{ item.add_image.url }}" height="200" width="200">
+    {% else %}
+        <h4>No image</h4>
+    {% endif %}
+
+    <a href="{% url 'update_item' item.id %}">Update</a>
+    <a href="{% url 'delete_item' item.id %}">Delete</a>
+
+</body>
+</html>

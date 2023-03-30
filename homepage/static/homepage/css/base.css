@@ -1,0 +1,254 @@
+body {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+    line-height: 1.5;
+    background-color: #E3E0D9;
+
+
+}
+
+
+
+.container {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+    background-color: #E3E0D9;
+    max-width: 100%;
+}
+
+.block-header{
+    line-height: 1;
+    border-bottom: 1px solid #E3E0D9;
+}
+
+
+
+.py-3 {
+    padding-bottom: 0 !important;
+    padding-top: 1rem !important;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+a {
+    text-decoration: none;
+
+}
+.pt-1 {
+    padding-top: 1rem !important;
+}
+
+.col-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+}
+
+.text-muted {
+    color: rgba(75, 75, 75, 1);
+    position: relative;
+    font-family: Montserrat arm,serif;
+    font-size: 24px;
+    padding: 0.5rem;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+.blog-header-logo {
+    font-family: Optima, serif;
+    font-size: 5.5rem;
+
+}
+
+
+
+.nav-item {
+    padding: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar-nav {
+    padding: 1rem;
+}
+
+.nav-link {
+    display: block;
+}
+
+.p-2 {
+    padding: 0.5rem !important;
+}
+
+
+
+header {
+    position: relative;
+    border-bottom: 1px solid rgba(75, 75, 75, 1);
+
+}
+
+.py-1 {
+    padding-bottom: 0.5rem!important;
+    padding-top: 0.5rem !important;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem !important;
+
+}
+
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: auto;
+    overflow-y: hidden;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.nav-scroller .nav {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: revert;
+    white-space: nowrap;
+}
+
+
+
+.blog-footer {
+    padding: 2.5rem;
+    color: #E3E0D9;
+    background-color: rgba(75, 75, 75, 1);
+    border-top: 0.05rem solid rgba(75, 75, 80, 1);
+    position: relative;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.col-6 {
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
+    max-width: max-content;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 10rem;
+}
+
+.list-unstyle {
+    padding-left: 0;
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+
+.text-muted1 {
+    color: rgba(255, 255, 255, 1);
+    font-family: Montserrat arm, serif;
+    font-size: 24px;
+    position: relative;
+    padding: 0.5rem;
+}
+
+
+
+
+
+.form-inline {
+    position: relative;
+    background: #E3E0D9;
+    border-radius: 10px;
+    padding-left: 65%;
+
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgba(75, 75, 75, 1);
+    background-color: #E3E0D9;
+    background-clip: padding-box;
+    border: 1px solid rgba(75, 75, 75, 1);
+    border-radius: 10px;
+}
+
+.btn {
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: middle;
+    line-height: 1.5;
+    border-radius: 10px;
+
+}
+
+.btn2 {
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: middle;
+    line-height: 1.5;
+    border-radius: 10px;
+    width: 35px;
+}
+
+.my-2 {
+    margin-bottom: 0.5rem !important;
+    margin-top: 0.5rem !important;
+}
+
+
+
+input {
+    overflow: visible;
+    margin: 0;
+    font-family: Optima, serif;
+}
+
+.footer-container {
+    padding: 0;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.footer-item {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 21px;
+    display: inline-block;
+    height: inherit;
+    transition: opacity 0.1s ease 0s;
+}
+
+main {
+    padding-right: 100px;
+    padding-left: 100px;
+    height: 700vh;
+}

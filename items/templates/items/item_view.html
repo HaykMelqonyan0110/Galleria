@@ -1,0 +1,31 @@
+{% extends 'homepage/base.html' %}
+
+{% block content %}
+    <div class="content-shop">
+
+        <div class="img-item-view">
+            {% if item.add_image %}
+                <img class="img-item-view" src="{{ item.add_image.url }}" height="500" width="500">
+            {% else %}
+                <h4>No image</h4>
+            {% endif %}
+        </div>
+        <div class="card-item-view-body">
+            <h2 class="title-item-view">{{ item.add_name }}</h2>
+            <h4>{{ item.add_price }}</h4>
+            <p>Colour: {{ item.add_color }}</p>
+            <p>Materials: {{ item.add_material }}</p>
+            <p>Size: {{ item.add_clothing_size }}</p>
+            <p>{{ item.add_description }}</p>
+            <div class="btn-item-view">
+                <button name="submit" type="submit">
+                    <a href="{% url 'add_to_shopping_bag' item.id %}" style="color: #E3E0D9; text-decoration: none">Add to shopping bag</a>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+{% endblock content %}

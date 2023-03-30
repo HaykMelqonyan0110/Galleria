@@ -1,0 +1,46 @@
+.img-item-view {
+    border-radius: 30px;
+}
+
+.img-item-view h4 {
+    text-align: center;
+    margin-block: 130px;
+    color: #4b4b4b;
+}
+
+
+.card-item-view-body {
+    position: relative;
+    width: 60%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    min-width: 0;
+    margin: 15px;
+    flex-direction: column;
+}
+
+.title-item-view {
+    font-size: 52px;
+    font-family: Montserrat arm serif;
+}
+
+.btn-item-view {
+    position: relative;
+    justify-content: center;
+}
+
+.btn-item-view button{
+    padding: 5px;
+    font-size: 21px;
+    line-height: 2;
+    border-radius: 10px;
+    color: #E3E0D9;
+    background-color: rgba(75, 75, 75, 1);
+    margin: 35px;
+    text-align: center;
+    border: 1px solid rgba(75, 75, 75, 1);
+    width: auto;
+    }

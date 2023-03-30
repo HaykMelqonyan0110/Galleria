@@ -1,0 +1,258 @@
+.row1 {
+
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.mb-22 {
+    margin-bottom: 0.5rem !important;
+
+}
+
+hr {
+    color: #4b4b4b;
+
+}
+
+.col-md-6   {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 100%;
+}
+
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #E3E0D9;
+    background-clip: border-box;
+    border: 0 solid rgba(75, 75, 75, 1);
+    border-radius: 0.25rem;
+}
+
+.card-img-right {
+    height: 100%;
+    border-radius: 0 3px 3px 0;
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.5rem;
+}
+
+.mb-0 {
+    margin: 40px;
+    font-family: Montserrat arm, serif;
+    font-weight: 700;
+    font-size: 57px;
+    line-height: 1.2;
+    color: rgba(75, 75, 75, 1);
+    text-align: center;
+}
+
+.mb-0-0 {
+    margin-bottom: 0.5rem;
+    font-family: Montserrat arm, serif;
+    font-weight: 700;
+    line-height: 1.2;
+    color: rgba(75, 75, 75, 1);
+    text-align: center;
+    margin-inline-start: 27px;
+}
+
+/*p {*/
+/*    position: relative;*/
+/*    display: block;*/
+/*    margin-block-start: 1em;*/
+/*    margin-block-end: 1em;*/
+/*    margin-inline-start: 15px;*/
+/*    margin-inline-end: 0;*/
+/*    margin-bottom: 1rem;*/
+/*    text-align: center;*/
+/*    font-family: Montserrat arm, serif;*/
+/*    font-size: 29px;*/
+
+/*}*/
+
+.mb-auto {
+    margin-bottom: 1rem!important;
+    font-size: 36px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.mb-auto-1 {
+    margin-bottom: 1rem!important;
+    margin-top: 100px;
+    margin-inline-start: 36px;
+}
+
+.mb-auto-2 {
+    margin-bottom: 1rem!important;
+
+}
+
+.mb-0-1{
+    padding: 17px;
+    margin-bottom: 0.5rem;
+    font-family: Montserrat arm, serif;
+    font-weight: 700;
+    line-height: 1.2;
+    color: rgba(75, 75, 75, 1);
+    text-align: center;
+    margin-top: 80px;
+    margin-block-end: 55px;
+    margin-inline-start: 15px;
+}
+
+.mb-0-1-2{
+    padding: 17px;
+    font-family: Montserrat arm, serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 1.2;
+    color: rgba(75, 75, 75, 1);
+    text-align: center;
+    margin: 50px;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+
+
+.btn-shop {
+    left: 45px;
+    width: 310px;
+    height: 100px;
+    background: rgba(75, 75, 75, 1);
+    padding: 10px 10px;
+    padding-top: 5px;
+    margin: 5px;
+    position: relative;
+    border-radius: 26px;
+    margin-left: 130px;
+    margin-right: 130px;
+}
+
+
+.btn-shop-text {
+    font-size: 43px;
+    font-family: Montserrat arm, serif;
+    color: #E3E0D9;
+}
+
+
+
+.title-text {
+    color: rgba(75, 75, 75, 1);
+    position: relative;
+    font-family: Montserrat arm,serif;
+    font-size: 55px;
+    padding: 0.5rem;
+    width: 300px;
+}
+
+
+.btn-go {
+    width: 90px;
+    height: 70px;
+    background: rgba(75, 75, 75, 1);
+    padding: 10px 10px;
+    padding-top: 5px;
+    margin: 5px;
+    position: relative;
+    border-radius: 50px;
+}
+
+.btn-go-text {
+    font-size: 24px;
+    font-family: Montserrat arm, serif;
+    color: #E3E0D9;
+
+}
+
+.row-content-category {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 15px;
+    margin-left: 80px;
+}
+
+.col-md-4 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 0;
+    padding-left: 0;
+    margin: 50px;
+
+}
+
+.card-1 {
+    position: relative;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid rgba(75, 75, 75, 1);
+    border-radius: 0.25rem;
+    width: 400px;
+}
+
+.card-body-1 {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 0.25rem;
+    height: 225px;
+}
+
+.card-text-product {
+    color: rgba(75, 75, 75, 1);
+    position: relative;
+    font-family: Montserrat arm,serif;
+    padding: 0.5rem;
+    font-size: 50px;
+
+}
+
+.card-money {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.card-text-money {
+    color: rgba(75, 75, 75, 1);
+    position: relative;
+    font-family: Montserrat arm,serif;
+    padding: 0.5rem;
+    font-size: 42px;
+    font-weight: 600;
+}
+
+.nav-item-product {
+    position: relative;
+    left: 185px;
+}
+
+.position-go {
+    width: auto;
+    margin-left: 78%;
+}

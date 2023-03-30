@@ -1,0 +1,18 @@
+.h2-in-form {
+    font-family: Montserrat arm serif;
+    color: rgba(75, 75, 75, 1);
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+
+}
+
+.package_icon {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}

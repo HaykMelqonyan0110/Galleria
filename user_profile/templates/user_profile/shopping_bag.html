@@ -1,0 +1,44 @@
+{% extends 'homepage/base.html' %}
+
+{% block title %}
+    Shopping Bag
+{% endblock title %}
+
+
+{% block content %}
+
+<h1 class="profile-title">SHOPPING BAG</h1>
+
+    <div class="content-bag">
+        <div class="card-bag">
+            <div class="card-bag-body">
+            <div class="img-bag">
+                {% if item.add_image %}
+                    <img class="img-bag" src="">
+                {% else %}
+                    <h4>No image</h4>
+                {% endif %}
+            </div>
+                <div class="card-about-bag">
+                    <a href="#" style="text-decoration: none; color: #4b4b4b"><p class="title-bag">sdcpqod</p></a>
+                    <p class="text-bag">efrverv</p>
+                    <p class="money-bag">200$</p>
+                </div>
+
+                <div class="btn-bag">
+                    <button><a href="#" style="text-decoration: none; color: #E3E0D9 "><p>X</p></a></button>
+                </div>
+
+            </div>
+        <hr>
+        </div>
+
+    </div>
+    <div class="form-cont2">
+        <div class="form-submit2">
+            <button name="submit" type="submit"><a style="color: #E3E0D9; text-decoration: none" href="{% url 'buy' %}">Buy</a></button>
+        </div>
+    </div>
+
+
+{% endblock content %}

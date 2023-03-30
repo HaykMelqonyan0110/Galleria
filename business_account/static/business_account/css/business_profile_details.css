@@ -1,0 +1,137 @@
+.brand-title {
+    text-align: center;
+    padding: 22px;
+    color: rgba(75, 75, 75, 1);
+    font-family: Montserrat arm, serif;
+    font-size: 30px;
+}
+
+.bs-link-edit h5 {
+    padding: 28px;
+    color: rgba(75, 75, 75, 1);
+    font-family: Montserrat arm, serif;
+}
+
+.bs-about {
+    padding-left: 300px;
+    text-align: left;
+    font-size: 22px;
+    font-family: Montserrat arm, serif;
+    color: rgba(75, 75, 75, 1);
+    padding-top: 8px;
+
+}
+
+.money-bord {
+    border-radius: 10px;
+    color: rgba(75, 75, 75, 1);
+    background-color: #E3E0D9;
+    text-align: center;
+    border: 1px solid rgba(75, 75, 75, 1);
+    width: 100px;
+    padding: 15px;
+    margin-left: 50px;
+    height: 50px;
+    margin-block: 19px;
+}
+
+.money-bord h5 {
+    font-size: 18px;
+    position: relative;
+}
+
+.title-shop {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.form-shop-add {
+    padding-left: 63%;
+}
+
+.form-shop-add button {
+    padding: 5px;
+    font-size: 24px;
+    line-height: 2;
+    border-radius: 40px;
+    color: #E3E0D9;
+    background-color: rgba(75, 75, 75, 1);
+    margin: 35px;
+    text-align: center;
+    border: 1px solid rgba(75, 75, 75, 1);
+    width: 150px;
+}
+
+.title-shop h5 {
+    font-family: Montserrat arm, serif;
+    font-size: 26px;
+    margin: 40px;
+}
+
+.content-shop {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.card-bs-shop {
+    position: relative;
+    width: 25%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.card-bs-shop-body {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 300px;
+    position: relative;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid rgba(75, 75, 75, 1);
+    border-radius: 0.25rem;
+    margin: 15px;
+}
+
+.img-bs-shop {
+    width: 100px;
+    height: 100px;
+}
+
+.card-about-shop {
+    width: 200px;
+}
+
+.card-about-item {
+    width: 100px;
+    border-left: 1px solid rgba(75, 75, 75, 1);
+}
+
+.title-brand {
+    font-size: 20px;
+    font-family: Montserrat arm serif;
+    padding: 5px;
+    text-align: center;
+    margin: 0;
+}
+
+.text-brand {
+    color: #6c757d!important;;
+    position: relative;
+    font-family: Montserrat arm,serif;
+    font-size: 18px;
+    padding: 0.5px;
+    margin: 0;
+    padding-left: 35px;
+
+}
+
+.num-item {
+    text-align: center;
+    font-family: Montserrat arm serif;
+    margin-block: 35px;
+}
