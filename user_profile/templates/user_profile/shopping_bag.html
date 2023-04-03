@@ -12,22 +12,26 @@
     <div class="content-bag">
         <div class="card-bag">
             <div class="card-bag-body">
-            <div class="img-bag">
-                {% if item.add_image %}
-                    <img class="img-bag" src="">
-                {% else %}
-                    <h4>No image</h4>
-                {% endif %}
-            </div>
-                <div class="card-about-bag">
-                    <a href="#" style="text-decoration: none; color: #4b4b4b"><p class="title-bag">sdcpqod</p></a>
-                    <p class="text-bag">efrverv</p>
-                    <p class="money-bag">200$</p>
-                </div>
 
-                <div class="btn-bag">
-                    <button><a href="#" style="text-decoration: none; color: #E3E0D9 "><p>X</p></a></button>
-                </div>
+            <div class="img-bag">
+                {% for item in items %}
+                    {% if item.item.add_image %}
+                        <img class="img-bag" src="{{ item.item.add_image.url }}">
+                    {% else %}
+                        <h4>No image</h4>
+                    {% endif %}
+
+            </div>
+                    <div class="card-about-bag">
+                        <a href="{% url 'item_view' item.item.id %}" style="text-decoration: none; color: #4b4b4b"><p class="title-bag">{{ item.item.add_name }}</p></a>
+                        <p class="text-bag">{{ item.item.owner }}</p>
+                        <p class="money-bag">{{ item.item.add_price }}</p>
+                        <a href="{% url 'delete-from_bag' item.id %}"><p>Delete</p></a>
+
+                    </div>
+
+                {% endfor %}
+
 
             </div>
         <hr>
@@ -37,6 +41,7 @@
     <div class="form-cont2">
         <div class="form-submit2">
             <button name="submit" type="submit"><a style="color: #E3E0D9; text-decoration: none" href="{% url 'buy' %}">Buy</a></button>
+            <button name="button" type="button"><a style="color: #E3E0D9; text-decoration: none" href="{% url 'clear_shopping_bag' %}">Clear</a></button>
         </div>
     </div>
 

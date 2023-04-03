@@ -14,7 +14,7 @@
             <div class="nav d-flex">
                 <img src="{{ account.company_image.url }}" width="80" height="80">
                 <h2 class="brand-title">{{ account.company_name }}</h2>
-                <a class="bs-link-edit" href="#" style=" color: rgba(75, 75, 75, 1);"></a>
+                <a class="bs-link-edit" href="{% url 'bs_account_orders' %}" style=" color: rgba(75, 75, 75, 1);">Your orders</a>
 
             </div>
 
